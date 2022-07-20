@@ -345,3 +345,24 @@ const U = [..."~!@#$%^&*()_+{}|:\"<>? "]
 const L = [..."`1234567890-=[]\\;',./ "]
   
 const handler = (k,c,s) => /^[a-z]$/.test(k) ? s ^ c ? k.toUpperCase() : k : L.includes(k) ? s ? U[L.indexOf(k)] : k : "KeyError"
+
+/* Red Knight
+
+Red Knight is chasing two pawns. Which pawn will be caught, and where?
+
+Input / Output
+Input will be two integers:
+
+N / n (Ruby) vertical position of Red Knight (0 or 1).
+P / p (Ruby) horizontal position of two pawns (between 2 and 1000000).
+Output has to be a tuple (python, haskell, Rust, prolog, C#), an array (javascript, ruby), an object (java), or a structure (C) with:
+
+"Black" or "White" - which pawn was caught
+Where it was caught (horizontal position)
+Example
+Input = 0, 4
+Output = ["White", 8] */
+
+function redKnight(N, P) {
+  return [(N + P) % 2 ? 'Black' : 'White', 2 * P]
+}
