@@ -366,3 +366,30 @@ Output = ["White", 8] */
 function redKnight(N, P) {
   return [(N + P) % 2 ? 'Black' : 'White', 2 * P]
 }
+
+/* Duplicate sandwich
+
+Task
+In this kata you will be given a list consisting of unique elements except for one thing that appears twice.
+
+Your task is to output a list of everything inbetween both occurrences of this element in the list.
+
+Examples:
+[0, 1, 2, 3, 4, 5, 6, 1, 7, 8] => [2, 3, 4, 5, 6]
+["None", "Hello", "Example", "hello", "None", "Extra"] => ["Hello", "Example", "hello"]
+[0, 0] => []
+[true, false, true] => [false]
+"example" => "xampl"
+Notes
+All elements will be the same datatype.
+All used elements will be primitive. */
+
+function duplicateSandwich(a) {
+  for (let i =0; i < a.length; i++){
+    const first = a.indexOf(a[i])
+    const last = a.lastIndexOf(a[i])
+    
+    if (first === last) continue
+    else return a.slice(first+1,last)
+  }
+}
