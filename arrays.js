@@ -126,3 +126,14 @@ Note: input will never be an empty string */
 function fakeBin(x){
   return x.split('').map( i => i < 5 ? 0 : 1).join('')
 }
+
+/* Remove String Spaces
+
+Simple, remove the spaces from the string, then return the resultant string. */
+
+function noSpace(x){
+  return x.replace(/\s/g, "")
+}
+function noSpace(x){
+  return x.split(' ').join('')
+}
