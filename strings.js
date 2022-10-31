@@ -290,3 +290,11 @@ I is misinterpreted as 1
 The test cases contain numbers only by mistake. */
 
 const correct = str => str.replace(/5/g, 'S').replace(/0/g, 'O').replace(/1/g, 'I')
+
+/* Remove exclamation marks
+
+Write function RemoveExclamationMarks which removes all exclamation marks from a given string. */
+
+function removeExclamationMarks(s) {
+  return s.replace(/!/g, '')
+}
