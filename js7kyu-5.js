@@ -463,3 +463,18 @@ function factorial(n) {
   if (n < 0 || n > 12) throw new RangeError("Range must be between 0 and 12")
   return n > 1 ? n * factorial(n - 1) : 1
 }
+
+/* Summing a number's digits
+
+Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+
+For example: (Input --> Output)
+
+10 --> 1
+99 --> 18
+-32 --> 5
+Let's assume that all numbers in the input will be integer values.*/
+
+function sumDigits(number) {
+  return Math.abs(number).toString().split("").reduce((total, next) => total + Number(next), 0);
+}
