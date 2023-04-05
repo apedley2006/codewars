@@ -148,3 +148,21 @@ function mxdiflg(a1, a2) {
   return Math.max(Math.max(...l1) - Math.min(...l2), Math.max(...l2) - Math.min(...l1))
 }
 
+/* Remove duplicate words
+
+Your task is to remove all duplicate words from a string, leaving only single (first) words entries.
+
+Example:
+
+Input:
+
+'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'
+
+Output:
+
+'alpha beta gamma delta' */
+
+function removeDuplicateWords (s) {
+  // your perfect code...
+  return [...new Set(s.split(" "))].join(" ")
+}
