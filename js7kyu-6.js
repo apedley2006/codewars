@@ -472,3 +472,14 @@ var greet = function(name) {
   return `Hello ${name.slice(0, 1).toUpperCase() +
     name.slice(1).toLowerCase()}!`
 };
+
+/* Most digits
+
+Find the number with the most digits.
+
+If two numbers in the argument array have the same number of digits, return the first one in the array. */
+
+function findLongest(array){
+  // code here
+  return array.reduce((a, b) => (`${b}`.length > `${a}`.length ? b : a))
+}
