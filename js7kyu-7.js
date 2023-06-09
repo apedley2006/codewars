@@ -374,9 +374,9 @@ function solve(arr){
     )
   };
 
-  /* Palindrome chain length
+/* Palindrome chain length
 
-  Number is a palindrome if it is equal to the number with digits in reversed order. For example, 5, 44, 171, 4884 are palindromes, and 43, 194, 4773 are not.
+Number is a palindrome if it is equal to the number with digits in reversed order. For example, 5, 44, 171, 4884 are palindromes, and 43, 194, 4773 are not.
 
 Write a function which takes a positive integer and returns the number of special steps needed to obtain a palindrome. The special step is: "reverse the digits, and add to the original number". If the resulting number is not a palindrome, repeat the procedure with the sum until the resulting number is a palindrome.
 
@@ -405,3 +405,14 @@ var palindromeChainLength = function(n) {
   }
   return 0
 }
+
+/* All unique
+Write a program to determine if a string contains only unique characters. Return true if it does and false otherwise.
+
+The string may contain any of the 128 ASCII characters. Characters are case-sensitive, e.g. 'a' and 'A' are considered different characters. */
+
+function hasUniqueChars(str){
+  // ...
+  return new Set(str).size === str.length
+}
+
