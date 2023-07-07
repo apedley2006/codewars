@@ -219,3 +219,16 @@ function inviteMoreWomen(L) {
   return L.reduce((a, b) => a + b, 0) > 0;
 }
 
+/* Automorphic Number (Special Numbers Series #6)
+
+Definition
+A number is called Automorphic number if and only if its square ends in the same digits as the number itself.
+
+Task
+Given a number determine if it Automorphic or not . */
+
+function automorphic(n){
+  //your code here
+  return (n * n + "").endsWith(n) ? "Automorphic" : "Not!!"
+}
+
