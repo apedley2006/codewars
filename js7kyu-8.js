@@ -256,3 +256,14 @@ function getFirstPython(list) {
     ? `${a.firstName}, ${a.country}`
     : "There will be no Python developers"
 }
+
+/* Spacify
+
+Modify the spacify function so that it returns the given string with spaces inserted between each character.
+
+spacify("hello world") // returns "h e l l o   w o r l d" */
+
+function spacify(str) {
+  // return 
+  return str.split("").join(" ")
+}
